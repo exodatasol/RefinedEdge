@@ -1,0 +1,19 @@
+[images]
+  remote_images = [
+    "https://img.freepik.com/**",
+    "https://i.ebayimg.com/**",
+    "https://m.media-amazon.com/**",
+    "https://thumbs.dreamstime.com/**",
+    "https://dearbarber.co.uk/**"
+  ]
+
+[build]
+  command = "bun run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
